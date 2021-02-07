@@ -63,7 +63,7 @@ class CompaniesLoaderServiceTest {
                         AverageCompanyFundingForCountry.builder()
                                 .country("France").companyCount(2L).totalFunding(644000L).build(),
                         AverageCompanyFundingForCountry.builder()
-                                .country("United States").companyCount(1L).totalFunding(8000000L).build()
+                                .country("Spain").companyCount(1L).totalFunding(8000000L).build()
                 ),
                 result
         );

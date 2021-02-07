@@ -22,6 +22,7 @@ public class Company {
     private String homepageUrl;
 
     public Long parseTotalMoneyRaised() {
-        return null;
+        // TODO replace with a parsing impl handling currencies and format
+        return Long.valueOf(totalMoneyRaised);
     }
 }

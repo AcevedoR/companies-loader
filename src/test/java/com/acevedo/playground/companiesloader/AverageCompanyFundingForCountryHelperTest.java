@@ -40,10 +40,10 @@ class AverageCompanyFundingForCountryHelperTest {
     @Test
     void notEmpty_list_adding_new_country() {
         // given
-        List<AverageCompanyFundingForCountry> result = singletonList(
+        List<AverageCompanyFundingForCountry> result = new ArrayList<>(singletonList(
                 AverageCompanyFundingForCountry.builder()
                         .country("Spain").companyCount(2L).totalFunding(500L).build()
-        );
+        ));
         CompanyDto company = CompanyDto.builder()
                 .name(COMPANY_1).moneyRaised(850L).country("Italy")
                 .build();
@@ -57,7 +57,7 @@ class AverageCompanyFundingForCountryHelperTest {
                         AverageCompanyFundingForCountry.builder()
                                 .country("Spain").companyCount(2L).totalFunding(500L).build(),
                         AverageCompanyFundingForCountry.builder()
-                                .country("Italy").companyCount(2L).totalFunding(850L).build()
+                                .country("Italy").companyCount(1L).totalFunding(850L).build()
                 ),
                 result
         );
@@ -66,12 +66,12 @@ class AverageCompanyFundingForCountryHelperTest {
     @Test
     void notEmpty_list_merging_country() {
         // given
-        List<AverageCompanyFundingForCountry> result = asList(
+        List<AverageCompanyFundingForCountry> result = new ArrayList<>(asList(
                 AverageCompanyFundingForCountry.builder()
                         .country("Belgium").companyCount(2L).totalFunding(400L).build(),
                 AverageCompanyFundingForCountry.builder()
                         .country("Germany").companyCount(3L).totalFunding(850L).build()
-        );
+        ));
         CompanyDto company = CompanyDto.builder()
                 .name(COMPANY_1).moneyRaised(520L).country("Germany")
                 .build();

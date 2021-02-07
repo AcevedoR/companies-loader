@@ -15,6 +15,19 @@ public class AverageCompanyFundingForCountry {
     Long totalFunding;
 
     public Long getAverageFunding(){
-        return totalFunding / companyCount;
+        return this.totalFunding / this.companyCount;
+    }
+
+    public static AverageCompanyFundingForCountry of(CompanyDto company){
+        return builder()
+                .country(company.getCountry())
+                .companyCount(1L)
+                .totalFunding(company.getMoneyRaised())
+                .build();
+    }
+
+    public void addCompanyToResult(CompanyDto company) {
+        this.totalFunding += company.getMoneyRaised();
+        this.companyCount++;
     }
 }
