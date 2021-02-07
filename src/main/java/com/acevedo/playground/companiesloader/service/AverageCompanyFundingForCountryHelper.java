@@ -1,7 +1,7 @@
 package com.acevedo.playground.companiesloader.service;
 
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
-import com.acevedo.playground.companiesloader.model.Company;
+import com.acevedo.playground.companiesloader.dto.Company;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

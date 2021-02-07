@@ -1,19 +1,15 @@
 package com.acevedo.playground.companiesloader.service;
 
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
-import com.acevedo.playground.companiesloader.dto.CompanyDto;
-import com.acevedo.playground.companiesloader.model.Company;
-import com.acevedo.playground.companiesloader.repository.CompanyRepository;
+import com.acevedo.playground.companiesloader.dto.Company;
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.MappingJsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.fasterxml.jackson.core.JsonParser;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -21,24 +17,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Slf4j
 public class CompaniesLoaderService {
 
     @Autowired
-    private CompanyRepository companyRepository;
-    @Autowired
     private IpStackService ipStackService;
-
-    public List<CompanyDto> loadCompanies(){
-        return companyRepository
-                .findAll(PageRequest.of(1, 20))
-                .get()
-                .map(CompanyDto::of)
-                .collect(Collectors.toList());
-    }
 
     public List<AverageCompanyFundingForCountry> parseCompanies(String filePath) throws IOException {
         List<AverageCompanyFundingForCountry> result = new ArrayList<>();

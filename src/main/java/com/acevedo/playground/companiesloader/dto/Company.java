@@ -1,4 +1,4 @@
-package com.acevedo.playground.companiesloader.model;
+package com.acevedo.playground.companiesloader.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
