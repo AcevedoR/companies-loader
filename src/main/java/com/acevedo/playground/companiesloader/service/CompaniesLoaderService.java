@@ -43,6 +43,7 @@ public class CompaniesLoaderService {
                 final Company company = mapper.treeToValue(node, Company.class);
                 log.info(company.toString());
 
+                // TODO: pagination ?
                 final String country = ipStackService.getCountryForHomepage(company.getHomepageUrl());
 
                 final CompanyDto companyDto = CompanyDto.of(company, country);
@@ -58,7 +59,7 @@ public class CompaniesLoaderService {
 
 
     /**
-     * to test out of memory error
+     * to test Outofmemory error
      * @param filePath
      */
     public void loadAllFile(String filePath) throws IOException {

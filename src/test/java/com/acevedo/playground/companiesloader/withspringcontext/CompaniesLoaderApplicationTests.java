@@ -12,7 +12,7 @@ class CompaniesLoaderApplicationTests {
 	private CompaniesLoaderService companiesLoaderService;
 
 	@Test
-	void contextLoads() {
+	void contextLoads() {//NOSONAR
 	}
 
 }

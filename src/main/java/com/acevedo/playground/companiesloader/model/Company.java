@@ -21,8 +21,8 @@ import static org.springframework.util.StringUtils.hasText;
 public class Company {
     private String name;
 
-//    @JsonAlias("total_money_raised")
-//    private String totalMoneyRaised;
+    @JsonAlias("total_money_raised")
+    private String totalMoneyRaised;
 
     @JsonAlias("funding_rounds")
     private List<Funding> fundingRounds = new ArrayList<>();
