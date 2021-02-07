@@ -1,4 +1,4 @@
-package com.acevedo.playground.companiesloader.service;
+package com.acevedo.playground.companiesloader.helpers;
 
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
 import com.acevedo.playground.companiesloader.dto.CompanyDto;

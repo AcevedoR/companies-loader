@@ -22,7 +22,7 @@ public class CompanyDto {
         return builder()
                 .name(company.getName())
                 .moneyRaised(company.parseTotalMoneyRaised())
-                .country(country != null ? country : "DEFAULT_UNKNOWN_COUNTRY")
+                .country(country != null ? country : "DEFAULT_COUNTRY")
                 .build();
     }
 }

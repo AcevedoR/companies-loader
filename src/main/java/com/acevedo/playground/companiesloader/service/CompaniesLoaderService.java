@@ -2,6 +2,7 @@ package com.acevedo.playground.companiesloader.service;
 
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
 import com.acevedo.playground.companiesloader.dto.CompanyDto;
+import com.acevedo.playground.companiesloader.helpers.AverageCompanyFundingForCountryHelper;
 import com.acevedo.playground.companiesloader.model.Company;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;

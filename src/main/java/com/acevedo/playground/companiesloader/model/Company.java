@@ -7,7 +7,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static com.acevedo.playground.companiesloader.helpers.CurrencyHelper.convertAmountToUSD;
+import static org.springframework.util.StringUtils.hasText;
 
 @Data
 @Builder
@@ -17,17 +21,21 @@ import java.util.List;
 public class Company {
     private String name;
 
-    @JsonAlias("total_money_raised")
-    private String totalMoneyRaised;
+//    @JsonAlias("total_money_raised")
+//    private String totalMoneyRaised;
 
     @JsonAlias("funding_rounds")
-    private List<Funding> fundingRounds;
+    private List<Funding> fundingRounds = new ArrayList<>();
 
     @JsonAlias("homepage_url")
     private String homepageUrl;
 
     public Long parseTotalMoneyRaised() {
-        // TODO replace with a parsing impl handling currencies and format
-        return Long.valueOf(totalMoneyRaised);
+        if(fundingRounds == null || fundingRounds.stream().anyMatch(x -> x == null || x.getAmount() == null || !hasText(x.getCurrencyCode()))) {
+            return 0L;// handling missing/invalid data
+        }
+        return fundingRounds.stream()
+                .map(x -> convertAmountToUSD(x.getAmount(), x.getCurrencyCode()))
+                .reduce(0L, Long::sum);
     }
 }
