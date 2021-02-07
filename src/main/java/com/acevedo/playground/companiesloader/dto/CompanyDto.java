@@ -1,5 +1,6 @@
 package com.acevedo.playground.companiesloader.dto;
 
+import com.acevedo.playground.companiesloader.model.Company;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +22,7 @@ public class CompanyDto {
         return builder()
                 .name(company.getName())
                 .moneyRaised(company.parseTotalMoneyRaised())
-                .country(country)
+                .country(country != null ? country : "DEFAULT_UNKNOWN_COUNTRY")
                 .build();
     }
 }

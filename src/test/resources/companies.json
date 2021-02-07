@@ -35,5 +35,31 @@
         "raised_currency_code": "USD"
       }
     ]
+  },
+  {
+    "name": "company 4 with 0 funding, to be skipped",
+    "total_money_raised": 0,
+    "homepage_url": "spanishUrl",
+    "funding_rounds": [
+      {
+        "raised_amount": 0
+      }
+    ]
+  },
+  {
+    "name": "company 5 with no funding data available, to be skipped",
+    "total_money_raised": 0,
+    "homepage_url": "spanishUrl",
+    "funding_rounds": null
+  },
+  {
+    "name": "company 6 with no funding data available, to be skipped",
+    "total_money_raised": 0,
+    "homepage_url": "spanishUrl",
+    "funding_rounds": [
+      {
+        "raised_amount": null
+      }
+    ]
   }
 ]
