@@ -1,4 +1,4 @@
-package com.acevedo.playground.companiesloader;
+package com.acevedo.playground.companiesloader.withspringcontext;
 
 import com.acevedo.playground.companiesloader.service.CompaniesLoaderService;
 import org.junit.jupiter.api.Test;

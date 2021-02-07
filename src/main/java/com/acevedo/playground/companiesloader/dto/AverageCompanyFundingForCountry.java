@@ -12,5 +12,9 @@ import lombok.NoArgsConstructor;
 public class AverageCompanyFundingForCountry {
     String country;
     Long companyCount;
-    Long averageFunding;
+    Long totalFunding;
+
+    public Long getAverageFunding(){
+        return totalFunding / companyCount;
+    }
 }

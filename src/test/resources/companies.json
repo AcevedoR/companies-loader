@@ -1,1 +1,39 @@
-[{"name":  "company 1", "total_money_raised": 50000, "homepage_url": "frenchUrl"}, { "name": "company 2", "total_money_raised":  100000, "homepage_url": "frenchUrl"}, { "name": "company 2", "total_money_raised":  40000, "homepage_url": "spanishUrl"}]
+[
+  {
+    "name": "company 1",
+    "total_money_raised": 600000,
+    "homepage_url": "frenchUrl",
+    "funding_rounds": [
+      {
+        "raised_amount": 600000,
+        "raised_currency_code": "USD"
+      }
+    ]
+  },
+  {
+    "name": "company 2",
+    "total_money_raised": 44000,
+    "homepage_url": "frenchUrl",
+    "funding_rounds": [
+      {
+        "raised_amount": 44000,
+        "raised_currency_code": "USD"
+      }
+    ]
+  },
+  {
+    "name": "company 3",
+    "total_money_raised": 8000000,
+    "homepage_url": "spanishUrl",
+    "funding_rounds": [
+      {
+        "raised_amount": 5000000,
+        "raised_currency_code": "USD"
+      },
+      {
+        "raised_amount": 3000000,
+        "raised_currency_code": "USD"
+      }
+    ]
+  }
+]

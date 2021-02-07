@@ -1,4 +1,4 @@
-package com.acevedo.playground.companiesloader;
+package com.acevedo.playground.companiesloader.withspringcontext;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

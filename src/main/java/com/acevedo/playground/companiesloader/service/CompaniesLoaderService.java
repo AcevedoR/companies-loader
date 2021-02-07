@@ -2,6 +2,7 @@ package com.acevedo.playground.companiesloader.service;
 
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
 import com.acevedo.playground.companiesloader.dto.Company;
+import com.acevedo.playground.companiesloader.dto.CompanyDto;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
@@ -44,7 +45,7 @@ public class CompaniesLoaderService {
                 final String country = ipStackService.getCountryForHomepage(company.getHomepageUrl());
 
                 AverageCompanyFundingForCountryHelper
-                        .populateResult(result, company, country);
+                        .populateResult(result, CompanyDto.of(company, country));
             }
         }
 
