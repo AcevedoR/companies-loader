@@ -1,0 +1,184 @@
+MongoDB shell version v4.2.8
+connecting to: mongodb://127.0.0.1:27017/companiesLoaderDB?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("baacf0ab-828b-4a60-974d-8f43b9a262da") }
+MongoDB server version: 4.2.8
+Variety: A MongoDB Schema Analyzer
+Version 1.5.1, released 02 October 2017
+Using collection of "companies"
+Using query of { }
+Using limit of 5000
+Using maxDepth of 99
+Using sort of { "_id" : -1 }
+Using outputFormat of "ascii"
+Using persistResults of false
+Using resultsDatabase of "varietyResults"
+Using resultsCollection of "companiesKeys"
+Using resultsUser of null
+Using resultsPass of null
+Using logKeysContinuously of false
+Using excludeSubkeys of [ ]
+Using arrayEscape of "XX"
+Using lastValue of false
+Using plugins of [ ]
++-----------------------------------------------------------------------------------------------------------------------------+
+| key                                                      | types                                   | occurrences | percents |
+| -------------------------------------------------------- | --------------------------------------- | ----------- | -------- |
+| _id                                                      | ObjectId                                |        5000 |   100.00 |
+| acquisition                                              | null (4065),Object (935)                |        5000 |   100.00 |
+| acquisitions                                             | Array                                   |        5000 |   100.00 |
+| alias_list                                               | null (2555),String (2445)               |        5000 |   100.00 |
+| blog_feed_url                                            | String (4565),null (435)                |        5000 |   100.00 |
+| blog_url                                                 | String (4696),null (304)                |        5000 |   100.00 |
+| category_code                                            | String (4530),null (470)                |        5000 |   100.00 |
+| competitions                                             | Array                                   |        5000 |   100.00 |
+| created_at                                               | String (4997),Date (3)                  |        5000 |   100.00 |
+| crunchbase_url                                           | String                                  |        5000 |   100.00 |
+| deadpooled_year                                          | null (4622),Number (378)                |        5000 |   100.00 |
+| description                                              | null (1953),String (3047)               |        5000 |   100.00 |
+| email_address                                            | String (4600),null (400)                |        5000 |   100.00 |
+| external_links                                           | Array                                   |        5000 |   100.00 |
+| founded_year                                             | null (1289),Number (3711)               |        5000 |   100.00 |
+| funding_rounds                                           | Array                                   |        5000 |   100.00 |
+| homepage_url                                             | String (4701),null (299)                |        5000 |   100.00 |
+| image                                                    | null (406),Object (4594)                |        5000 |   100.00 |
+| investments                                              | Array                                   |        5000 |   100.00 |
+| milestones                                               | Array                                   |        5000 |   100.00 |
+| name                                                     | String                                  |        5000 |   100.00 |
+| number_of_employees                                      | null (2537),Number (2463)               |        5000 |   100.00 |
+| offices                                                  | Array                                   |        5000 |   100.00 |
+| overview                                                 | String (4681),null (319)                |        5000 |   100.00 |
+| partners                                                 | Array                                   |        5000 |   100.00 |
+| permalink                                                | String                                  |        5000 |   100.00 |
+| phone_number                                             | String (4587),null (413)                |        5000 |   100.00 |
+| products                                                 | Array                                   |        5000 |   100.00 |
+| providerships                                            | Array                                   |        5000 |   100.00 |
+| relationships                                            | Array                                   |        5000 |   100.00 |
+| screenshots                                              | Array                                   |        5000 |   100.00 |
+| tag_list                                                 | String (4043),null (957)                |        5000 |   100.00 |
+| total_money_raised                                       | String                                  |        5000 |   100.00 |
+| twitter_username                                         | null (2047),String (2953)               |        5000 |   100.00 |
+| updated_at                                               | String                                  |        5000 |   100.00 |
+| video_embeds                                             | Array                                   |        5000 |   100.00 |
+| founded_day                                              | null (3123),Number (1876)               |        4999 |    99.98 |
+| founded_month                                            | null (2530),Number (2469)               |        4999 |    99.98 |
+| deadpooled_day                                           | null (4736),Number (261)                |        4997 |    99.94 |
+| deadpooled_month                                         | null (4689),Number (308)                |        4997 |    99.94 |
+| deadpooled_url                                           | null (4494),String (503)                |        4997 |    99.94 |
+| ipo                                                      | null (4830),Object (167)                |        4997 |    99.94 |
+| image.available_sizes                                    | Array                                   |        4594 |    91.88 |
+| image.attribution                                        | null                                    |        4591 |    91.82 |
+| offices.XX.address1                                      | String (4104),null (196)                |        4294 |    85.88 |
+| offices.XX.address2                                      | String (3919),null (382)                |        4294 |    85.88 |
+| offices.XX.city                                          | String (4198),null (99)                 |        4294 |    85.88 |
+| offices.XX.country_code                                  | String                                  |        4294 |    85.88 |
+| offices.XX.description                                   | String (2555),null (1770)               |        4294 |    85.88 |
+| offices.XX.latitude                                      | Number (3449),null (1063)               |        4294 |    85.88 |
+| offices.XX.longitude                                     | Number (3449),null (1063)               |        4294 |    85.88 |
+| offices.XX.state_code                                    | String (2965),null (1548)               |        4294 |    85.88 |
+| offices.XX.zip_code                                      | String (4112),null (188)                |        4294 |    85.88 |
+| relationships.XX.is_past                                 | Boolean (3921),null (338)               |        4089 |    81.78 |
+| relationships.XX.person                                  | Object                                  |        4089 |    81.78 |
+| relationships.XX.person.first_name                       | String                                  |        4089 |    81.78 |
+| relationships.XX.person.last_name                        | String                                  |        4089 |    81.78 |
+| relationships.XX.person.permalink                        | String                                  |        4089 |    81.78 |
+| relationships.XX.title                                   | String                                  |        4089 |    81.78 |
+| products.XX.name                                         | String                                  |        2029 |    40.58 |
+| products.XX.permalink                                    | String                                  |        2029 |    40.58 |
+| competitions.XX.competitor                               | Object                                  |        1948 |    38.96 |
+| competitions.XX.competitor.name                          | String                                  |        1948 |    38.96 |
+| competitions.XX.competitor.permalink                     | String                                  |        1948 |    38.96 |
+| funding_rounds.XX.funded_day                             | Number (1763),null (223)                |        1892 |    37.84 |
+| funding_rounds.XX.funded_month                           | Number (1820),null (115)                |        1892 |    37.84 |
+| funding_rounds.XX.funded_year                            | Number (1851),null (49)                 |        1892 |    37.84 |
+| funding_rounds.XX.id                                     | Number                                  |        1892 |    37.84 |
+| funding_rounds.XX.investments                            | Array                                   |        1892 |    37.84 |
+| funding_rounds.XX.raised_amount                          | null (427),Number (1665)                |        1892 |    37.84 |
+| funding_rounds.XX.raised_currency_code                   | null (313),String (1685)                |        1892 |    37.84 |
+| funding_rounds.XX.round_code                             | String                                  |        1892 |    37.84 |
+| funding_rounds.XX.source_description                     | String (1761),null (138)                |        1892 |    37.84 |
+| funding_rounds.XX.source_url                             | String (1843),null (52)                 |        1892 |    37.84 |
+| screenshots.XX.attribution                               | null                                    |        1720 |    34.40 |
+| screenshots.XX.available_sizes                           | Array                                   |        1720 |    34.40 |
+| funding_rounds.XX.investments.XX.company                 | null (1502),Object (344)                |        1571 |    31.42 |
+| funding_rounds.XX.investments.XX.financial_org           | Object (1399),null (681)                |        1571 |    31.42 |
+| funding_rounds.XX.investments.XX.person                  | null (1486),Object (448)                |        1571 |    31.42 |
+| funding_rounds.XX.investments.XX.financial_org.name      | String                                  |        1399 |    27.98 |
+| funding_rounds.XX.investments.XX.financial_org.permalink | String                                  |        1399 |    27.98 |
+| external_links.XX.external_url                           | String                                  |        1168 |    23.36 |
+| external_links.XX.title                                  | String                                  |        1168 |    23.36 |
+| milestones.XX.description                                | String                                  |         949 |    18.98 |
+| milestones.XX.id                                         | Number                                  |         949 |    18.98 |
+| milestones.XX.source_description                         | String                                  |         949 |    18.98 |
+| milestones.XX.source_text                                | String (433),null (679)                 |         949 |    18.98 |
+| milestones.XX.source_url                                 | String                                  |         949 |    18.98 |
+| milestones.XX.stoneable                                  | Object                                  |         949 |    18.98 |
+| milestones.XX.stoneable.name                             | String                                  |         949 |    18.98 |
+| milestones.XX.stoneable.permalink                        | String                                  |         949 |    18.98 |
+| milestones.XX.stoneable_type                             | String                                  |         949 |    18.98 |
+| milestones.XX.stoned_acquirer                            | null                                    |         949 |    18.98 |
+| milestones.XX.stoned_day                                 | Number (902),null (121)                 |         949 |    18.98 |
+| milestones.XX.stoned_month                               | Number (936),null (36)                  |         949 |    18.98 |
+| milestones.XX.stoned_value                               | null                                    |         949 |    18.98 |
+| milestones.XX.stoned_value_type                          | null                                    |         949 |    18.98 |
+| milestones.XX.stoned_year                                | Number                                  |         949 |    18.98 |
+| acquisition.acquired_day                                 | Number (810),null (125)                 |         935 |    18.70 |
+| acquisition.acquired_month                               | Number (910),null (25)                  |         935 |    18.70 |
+| acquisition.acquired_year                                | Number (928),null (7)                   |         935 |    18.70 |
+| acquisition.acquiring_company                            | Object                                  |         935 |    18.70 |
+| acquisition.acquiring_company.name                       | String                                  |         935 |    18.70 |
+| acquisition.acquiring_company.permalink                  | String                                  |         935 |    18.70 |
+| acquisition.price_amount                                 | NumberLong (15),null (604),Number (316) |         935 |    18.70 |
+| acquisition.price_currency_code                          | String                                  |         935 |    18.70 |
+| acquisition.source_description                           | String (896),null (39)                  |         935 |    18.70 |
+| acquisition.source_url                                   | String (896),null (39)                  |         935 |    18.70 |
+| acquisition.term_code                                    | null (621),String (314)                 |         935 |    18.70 |
+| video_embeds.XX.description                              | String                                  |         731 |    14.62 |
+| video_embeds.XX.embed_code                               | String                                  |         731 |    14.62 |
+| providerships.XX.is_past                                 | Boolean (535),null (26)                 |         556 |    11.12 |
+| providerships.XX.provider                                | Object                                  |         556 |    11.12 |
+| providerships.XX.provider.name                           | String                                  |         556 |    11.12 |
+| providerships.XX.provider.permalink                      | String                                  |         556 |    11.12 |
+| providerships.XX.title                                   | String                                  |         556 |    11.12 |
+| acquisitions.XX.acquired_day                             | Number (487),null (134)                 |         532 |    10.64 |
+| acquisitions.XX.acquired_month                           | Number (521),null (33)                  |         532 |    10.64 |
+| acquisitions.XX.acquired_year                            | Number (528),null (8)                   |         532 |    10.64 |
+| acquisitions.XX.company                                  | Object                                  |         532 |    10.64 |
+| acquisitions.XX.company.name                             | String                                  |         532 |    10.64 |
+| acquisitions.XX.company.permalink                        | String                                  |         532 |    10.64 |
+| acquisitions.XX.price_amount                             | null (463),Number (209),NumberLong (27) |         532 |    10.64 |
+| acquisitions.XX.price_currency_code                      | String                                  |         532 |    10.64 |
+| acquisitions.XX.source_description                       | String (525),null (30)                  |         532 |    10.64 |
+| acquisitions.XX.source_url                               | String (525),null (30)                  |         532 |    10.64 |
+| acquisitions.XX.term_code                                | null (466),String (205)                 |         532 |    10.64 |
+| funding_rounds.XX.investments.XX.person.first_name       | String                                  |         448 |     8.96 |
+| funding_rounds.XX.investments.XX.person.last_name        | String                                  |         448 |     8.96 |
+| funding_rounds.XX.investments.XX.person.permalink        | String                                  |         448 |     8.96 |
+| funding_rounds.XX.investments.XX.company.name            | String                                  |         344 |     6.88 |
+| funding_rounds.XX.investments.XX.company.permalink       | String                                  |         344 |     6.88 |
+| investments.XX.funding_round                             | Object                                  |         190 |     3.80 |
+| investments.XX.funding_round.company                     | Object                                  |         190 |     3.80 |
+| investments.XX.funding_round.company.name                | String                                  |         190 |     3.80 |
+| investments.XX.funding_round.company.permalink           | String                                  |         190 |     3.80 |
+| investments.XX.funding_round.funded_day                  | Number (183),null (27)                  |         190 |     3.80 |
+| investments.XX.funding_round.funded_month                | Number (187),null (12)                  |         190 |     3.80 |
+| investments.XX.funding_round.funded_year                 | Number (188),null (2)                   |         190 |     3.80 |
+| investments.XX.funding_round.raised_amount               | null (60),Number (166),NumberLong (3)   |         190 |     3.80 |
+| investments.XX.funding_round.raised_currency_code        | null (45),String (173)                  |         190 |     3.80 |
+| investments.XX.funding_round.round_code                  | String                                  |         190 |     3.80 |
+| investments.XX.funding_round.source_description          | String (189),null (10)                  |         190 |     3.80 |
+| investments.XX.funding_round.source_url                  | String (190),null (7)                   |         190 |     3.80 |
+| ipo.pub_day                                              | Number (119),null (48)                  |         167 |     3.34 |
+| ipo.pub_month                                            | Number (126),null (41)                  |         167 |     3.34 |
+| ipo.pub_year                                             | Number (131),null (36)                  |         167 |     3.34 |
+| ipo.stock_symbol                                         | String                                  |         167 |     3.34 |
+| ipo.valuation_amount                                     | Number (23),null (133),NumberLong (11)  |         167 |     3.34 |
+| ipo.valuation_currency_code                              | String                                  |         167 |     3.34 |
+| partners.XX.homepage_url                                 | String                                  |          54 |     1.08 |
+| partners.XX.link_1_name                                  | String (50),null (4)                    |          54 |     1.08 |
+| partners.XX.link_1_url                                   | String (50),null (4)                    |          54 |     1.08 |
+| partners.XX.link_2_name                                  | null (45),String (9)                    |          54 |     1.08 |
+| partners.XX.link_2_url                                   | null (45),String (9)                    |          54 |     1.08 |
+| partners.XX.link_3_name                                  | null                                    |          54 |     1.08 |
+| partners.XX.link_3_url                                   | null                                    |          54 |     1.08 |
+| partners.XX.partner_name                                 | String                                  |          54 |     1.08 |
++-----------------------------------------------------------------------------------------------------------------------------+
