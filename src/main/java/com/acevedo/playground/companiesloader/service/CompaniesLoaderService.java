@@ -1,5 +1,6 @@
 package com.acevedo.playground.companiesloader.service;
 
+import com.acevedo.playground.companiesloader.client.CountryLookout;
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
 import com.acevedo.playground.companiesloader.dto.CompanyDto;
 import com.acevedo.playground.companiesloader.helpers.AverageCompanyFundingForCountryHelper;
@@ -25,7 +26,7 @@ import java.util.List;
 public class CompaniesLoaderService {
 
     @Autowired
-    private IpStackService ipStackService;
+    private CountryLookout countryLookout;
 
     public List<AverageCompanyFundingForCountry> parseCompanies(String filePath) throws IOException {
         List<AverageCompanyFundingForCountry> result = new ArrayList<>();
@@ -39,12 +40,12 @@ public class CompaniesLoaderService {
             }
             while (parser.nextToken() == JsonToken.START_OBJECT) {
                 ObjectNode node = mapper.readTree(parser);
-                log.info(node.toString());
+                log.debug(node.toString());
                 final Company company = mapper.treeToValue(node, Company.class);
-                log.info(company.toString());
+                log.debug(company.toString());
 
                 // TODO: pagination ?
-                final String country = ipStackService.getCountryForHomepage(company.getHomepageUrl());
+                final String country = countryLookout.getCountryForHomepage(company.getHomepageUrl());
 
                 final CompanyDto companyDto = CompanyDto.of(company, country);
                 if(companyDto.getMoneyRaised() != null && companyDto.getMoneyRaised() != 0L) {// data sometimes miss this info, in this case we will skip the company

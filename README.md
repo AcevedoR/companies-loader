@@ -3,6 +3,14 @@
 ## setup
 - java 11 needed
 
+Change spring profile in `application.yaml`
+
+**dev** = with real companies.json file and mocked ipstack calls (random countries)
+
+**prod** = with tiny companies_light.json file and real ipstack calls
+
+launch with `mvn spring-boot:run`
+  
 ## process
 - streaming `companies.json file and outputting a result
 

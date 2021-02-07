@@ -1,9 +1,9 @@
 package com.acevedo.playground.companiesloader;
 
 
+import com.acevedo.playground.companiesloader.client.CountryLookout;
 import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountry;
 import com.acevedo.playground.companiesloader.service.CompaniesLoaderService;
-import com.acevedo.playground.companiesloader.service.IpStackService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,11 +29,11 @@ class CompaniesLoaderServiceTest {
     private CompaniesLoaderService companiesLoaderService;
 
     @Mock
-    private IpStackService ipStackServiceMock;
+    private CountryLookout ipStackCountryLookoutMock;
 
     @BeforeEach
     void init(){
-        when(ipStackServiceMock.getCountryForHomepage(any(String.class))).then(new Answer<String>() {
+        when(ipStackCountryLookoutMock.getCountryForHomepage(any(String.class))).then(new Answer<String>() {
             @Override
             public String answer(InvocationOnMock invocation) throws Throwable {
                 String homepageUrl = invocation.getArgument(0);

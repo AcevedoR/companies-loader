@@ -4,6 +4,7 @@ import com.acevedo.playground.companiesloader.dto.AverageCompanyFundingForCountr
 import com.acevedo.playground.companiesloader.service.CompaniesLoaderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,10 +25,13 @@ public class CompaniesLoaderApplication implements CommandLineRunner {
     @Autowired
     private CompaniesLoaderService companiesLoaderService;
 
+    @Value("${spring.profiles.active}")
+    private String activeProfile;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("EXECUTING : command line runner");
-        final String filePath = args[0] != null ? args[0] : "./data/companies.json";
+        final String filePath = "prod".equals(activeProfile) ? "./data/companies_light.json" : "./data/companies.json";
         final List<AverageCompanyFundingForCountry> results = companiesLoaderService.parseCompanies(filePath);
         log.info("Results: (count: {}) :", results.size());
         log.info("Country, companies count, average founding in USD :");
