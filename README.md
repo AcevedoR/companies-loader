@@ -6,13 +6,13 @@ Personal project demonstrating streaming a JSON file in Java.
 ## setup
 - java 11 needed
 
-Change spring profile in `application.yaml` :
+Change spring profile in `src/main/resources/application.yaml` :
 
 - **dev** = with real companies.json file and mocked ipstack calls (random countries)
 
 - **prod** = with tiny companies_light.json file and real ipstack calls
 
-launch with `mvn spring-boot:run`
+launch with `./mvnw spring-boot:run` or `mvn spring-boot:run`
   
 ## state
 Streaming `companies.json` file with Jackson and outputting a result.
