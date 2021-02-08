@@ -1,0 +1,30 @@
+{
+  "ip": "2607:f8b0:4004:808::2003",
+  "type": "ipv6",
+  "continent_code": "NA",
+  "continent_name": "North America",
+  "country_code": "US",
+  "country_name": "United States",
+  "region_code": "VA",
+  "region_name": "Virginia",
+  "city": "Herndon",
+  "zip": "22095",
+  "latitude": 38.98371887207031,
+  "longitude": -77.38275909423828,
+  "location": {
+    "geoname_id": 4763793,
+    "capital": "Washington D.C.",
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "native": "English"
+      }
+    ],
+    "country_flag": "http:\/\/assets.ipstack.com\/flags\/us.svg",
+    "country_flag_emoji": "\ud83c\uddfa\ud83c\uddf8",
+    "country_flag_emoji_unicode": "U+1F1FA U+1F1F8",
+    "calling_code": "1",
+    "is_eu": false
+  }
+}

@@ -11,6 +11,9 @@ import java.util.Optional;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AverageCompanyFundingForCountryHelper {
+
+    public static final String DEFAULT_COUNTRY = "DEFAULT_COUNTRY";
+
     public static void populateResult(List<AverageCompanyFundingForCountry> result, CompanyDto company) {
         Assert.notNull(result, "result list should not be null");
         Assert.notNull(result, "company should not be null");

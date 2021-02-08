@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import static com.acevedo.playground.companiesloader.helpers.AverageCompanyFundingForCountryHelper.DEFAULT_COUNTRY;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +24,7 @@ public class CompanyDto {
         return builder()
                 .name(company.getName())
                 .moneyRaised(company.parseTotalMoneyRaised())
-                .country(country != null ? country : "DEFAULT_COUNTRY")
+                .country(country != null ? country : DEFAULT_COUNTRY)
                 .build();
     }
 }
