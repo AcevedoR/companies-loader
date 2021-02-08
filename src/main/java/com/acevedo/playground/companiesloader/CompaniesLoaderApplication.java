@@ -20,8 +20,7 @@ public class CompaniesLoaderApplication implements CommandLineRunner {
         SpringApplication.run(CompaniesLoaderApplication.class, args);
         log.info("APPLICATION FINISHED");
     }
-    // TODO switch profile: with api call and little file, and without and real file
-    // TODO apistack impl and tests: test deserialization only
+
     @Autowired
     private CompaniesLoaderService companiesLoaderService;
 
