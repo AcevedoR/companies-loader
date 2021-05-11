@@ -1,7 +1,7 @@
 # companies-loader
 
 ## intro
-Personal project demonstrating streaming a JSON file in Java.
+Homework for a job interview, demonstrating streaming a JSON file in Java.
 
 ## setup
 - java 11 needed
